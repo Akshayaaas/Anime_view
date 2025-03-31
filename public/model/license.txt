@@ -1,0 +1,11 @@
+Model Information:
+* title:	Clementine from Telltale's The Walking Dead
+* source:	https://sketchfab.com/3d-models/clementine-from-telltales-the-walking-dead-728c7872bdb84f54b5049aa8f4d6ea51
+* author:	Théo Domon (https://sketchfab.com/Gloomeskk)
+
+Model License:
+* license type:	CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
+* requirements:	Author must be credited. No commercial use.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Clementine from Telltale's The Walking Dead" (https://sketchfab.com/3d-models/clementine-from-telltales-the-walking-dead-728c7872bdb84f54b5049aa8f4d6ea51) by Théo Domon (https://sketchfab.com/Gloomeskk) licensed under CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
