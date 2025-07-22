@@ -82,7 +82,7 @@ function AnimeCard({ anime }) {
               </motion.div>
 
               <motion.div
-                className="flex flex-row gap-2 items-center"
+                 className="flex flex-row gap-2 items-center"
                 whileHover={{ x: 5 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >

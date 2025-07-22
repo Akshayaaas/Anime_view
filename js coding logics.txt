@@ -1,0 +1,183 @@
+1)	 First :
+let counter = 0;
+for (var i = 1; i <= 10; i++) {
+  counter+= i;
+}
+console.log(counter);
+console.log(i);
+
+output:
+55
+11
+
+The issue in your code is with the use of var for the loop variable i.
+Here is the code:
+Explanation of the issue:
+•	var is function-scoped, not block-scoped. So, after the for loop ends, the variable i is still accessible outside the loop.
+•	This means console.log(i); will output 11 because the loop stops when i becomes 11 (the failing condition).
+•	This might be unintended if you want i to be block-scoped and not accessible outside the loop.
+How to fix:
+Use let for i instead of var. let is block-scoped, so i will only exist inside the loop block.
+let counter = 0;
+for (let i = 1; i <= 10; i++) {
+  counter += i;
+}
+console.log(counter);
+// console.log(i); // This will now cause a ReferenceError because i is not defined here.
+If you still want to log i outside the loop, you need to declare it outside:
+let counter = 0;
+let i;
+for (i = 1; i <= 10; i++) {
+  counter += i;
+}
+console.log(counter);
+console.log(i); // outputs 11
+Summary:
+•	Using var makes i accessible outside the loop, which might lead to unexpected behavior.
+•	Use let inside the loop to limit the scope of i.
+________________________________________
+
+
+
+2)
+
+Analyze the below code. Do you see any issue? If yes, what is that issue?
+
+const object1 = {
+  a: 10,
+  b: 20,
+  c: function () {
+	console.log(this.a + this.b);
+  },
+};
+const func = object1.c;
+func();   explain me this code whats the error clearly and easily
+
+
+
+Context
+— none
+Let me analyze this code step by step to explain the issue clearly:
+
+const object1 = {  
+  a: 10,  
+  b: 20,  
+  c: function () {
+    console.log(this.a + this.b);  
+  },
+};
+
+const func = object1.c;
+func();
+
+
+The Issue: Lost Context (this binding)
+What happens:
+
+When you call func(), it will output NaN instead of 30
+Why this happens:
+
+When method is part of object:
+
+object1.c(); // this = object1, outputs: 30
+
+
+When method is extracted:
+
+const func = object1.c; // Extract the function
+func(); // this = undefined (strict mode) or window (non-strict), outputs: NaN
+
+
+Step-by-Step Explanation:
+object1.c is a method that relies on this.a and this.b
+When you do const func = object1.c, you're copying just the function, not the context
+When you call func(), there's no object before the dot, so this doesn't point to object1
+this.a and this.b become undefined
+undefined + undefined = NaN
+Solutions:
+Solution 1: Use bind()
+
+const func = object1.c.bind(object1);
+func(); // outputs: 30
+
+
+
+Solution 2: Use arrow function wrapper
+
+const func = () => object1.c();
+func(); // outputs: 30
+
+
+
+Solution 3: Use call() or apply()
+
+const func = object1.c;
+func.call(object1); // outputs: 30
+
+
+
+Solution 4: Keep the object reference
+
+const func = object1.c;
+func.call(object1); // or just call object1.c() directly
+
+
+
+Key Takeaway:
+In JavaScript, methods lose their this context when extracted from objects. The this value is determined by how the function is called, not where it's defined.
+
+
+__________________________________________
+
+
+
+
+Create a JavaScript function that calculates the tip for a given bill amount and tip percentage. Bill amount and tip percentage will be input parameters while output will be calculated tip value.
+
+Here's a simple JavaScript function that calculates the tip based on a bill amount and tip percentage:
+
+function calculateTip(billAmount, tipPercentage) {
+  return billAmount * (tipPercentage / 100);
+}
+
+// Example usage:
+const tip = calculateTip(100, 15);
+console.log(tip); // Outputs: 15
+Explanation:
+billAmount: total bill amount (e.g., 100).
+tipPercentage: tip rate as a percentage (e.g., 15 for 15%).
+The function returns the tip amount by multiplying the bill by the tip rate divided by 100.
+Let me know if you want me to add input validation or rounding!
+
+
+___________________________________________________
+
+
+What is the issue in the below code: const fetchData = async () => { const response = await fetch("https://api.samplewebsite.com/data"); const data = await response.json(); console.log(data); }; fetchData();
+
+The issue in your code depends on the environment where it is run:
+
+Possible issue:
+fetch may not be defined in some environments like older Node.js versions (before v18).
+If you run this code in such an environment, you'll get a runtime error:
+ReferenceError: fetch is not defined
+Explanation:
+fetch is a built-in Web API available in browsers.
+In Node.js, fetch is available natively starting from version 18.
+If you are using an older Node.js version, you need to add a polyfill like node-fetch.
+How to fix in Node.js (if needed):
+// Install node-fetch first: npm install node-fetch
+import fetch from 'node-fetch';
+
+const fetchData = async () => {
+  const response = await fetch("https://api.samplewebsite.com/data");
+  const data = await response.json();
+  console.log(data);
+};
+
+fetchData();
+If running in a supported environment (modern browser or Node.js v18+), your code is fine and will work as expected.
+
+
+
+

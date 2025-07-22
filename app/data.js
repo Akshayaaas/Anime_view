@@ -33,18 +33,18 @@ export const data = [
   },
   {
     id: "3",
-    name: "dragon_ball",
+    name: "trinity blood",
     image: {
-      original:
-        "https://m.media-amazon.com/images/M/MV5BMGMyOThiMGUtYmFmZi00YWM0LWJiM2QtZGMwM2Q2ODE4MzhhXkEyXkFqcGdeQXVyMjc2Nzg5OTQ@._V1_FMjpg_UX1000_.jpg",
+      original:"/trinity.jpg"   
     },
     kind: "TV",
-    episodes: 153,
-    episodes_aired: 153,
-    score: "8.68",
-    trailer: "https://www.youtube.com/watch?v=wHAaKXtfSOg",
-    description: "Dragon Ball is a Japanese anime television series produced by Toei Animation. It is based on the manga series of the same name created by Akira Toriyama. The story follows the adventures of Son Goku, a young boy who grows up to become a powerful warrior known as a Saiyan. Along with his friends, Goku embarks on a journey to collect the Dragon Balls, which are scattered throughout the world and can grant any wish.",
-  },
+    episodes: 24,
+    episodes_aired: 24,
+    score: "6.02",
+    trailer: "https://www.youtube.com/watch?v=VQX0jclEzXg",
+    description: "Trinity Blood is a Japanese manga series written and illustrated by Sunao Yoshida. The story follows Alvin, a young boy who becomes a vampire after his father is killed by a vampire. Despite being a vampire, he becomes a vampire slayer and meets Aria, a vampire who becomes his partner. Together, they face various challenges and opponents, including the powerful vampire, Alvin.",
+  
+    },
   {
     id: "4",
     name: "jujutsu_kaisen",
@@ -286,17 +286,19 @@ export const data = [
   },
   {
     id: "23",
-    name: "trinity blood",
+    name: "dragon_ball",
     image: {
-      original:"/trinity.jpg"   
-    },
+      original:
+           "https://www.google.com/search?safe=active&sca_esv=571e9f62cdadf4fd&rlz=1C1GCLC_enIN1145IN1145&sxsrf=AE3TifP0OYa_1EUEucyShUdv-AGqZ3BWoQ:1753173053287&q=dragon+ball+wallpaper&udm=2&fbs=AIIjpHxU7SXXniUZfeShr2fp4giZ1Y6MJ25_tmWITc7uy4KIemkjk18Cn72Gp24fGkjjh6zx5r9-tqg6OrBVOwHghPIhEsOaPUkNBq8_GwjXd8IEJ3n0x1UxvW5gGd_7iN2i0mUaRYnyJtTmRwbYnHDP9WtefPVJ9ttSK5RWBeBbAuQAm2uqI3Xd19QNgrRyJVd-sJJFYJnh6-1s8vGvPq9Qf2aW0PZk-w&sa=X&ved=2ahUKEwi9t8jIhtCOAxXETGwGHTSSJH0QtKgLKAF6BAgSEAE&biw=1280&bih=585&dpr=1.5#vhid=VxULzxo34X-mkM&vssid=mosaic"    
+          },
     kind: "TV",
-    episodes: 24,
-    episodes_aired: 24,
-    score: "6.02",
-    trailer: "https://www.youtube.com/watch?v=VQX0jclEzXg",
-    description: "Trinity Blood is a Japanese manga series written and illustrated by Sunao Yoshida. The story follows Alvin, a young boy who becomes a vampire after his father is killed by a vampire. Despite being a vampire, he becomes a vampire slayer and meets Aria, a vampire who becomes his partner. Together, they face various challenges and opponents, including the powerful vampire, Alvin.",
-  },
+    episodes: 153,
+    episodes_aired: 153,
+    score: "8.68",
+    trailer: "https://www.youtube.com/watch?v=wHAaKXtfSOg",
+    description: "Dragon Ball is a Japanese anime television series produced by Toei Animation. It is based on the manga series of the same name created by Akira Toriyama. The story follows the adventures of Son Goku, a young boy who grows up to become a powerful warrior known as a Saiyan. Along with his friends, Goku embarks on a journey to collect the Dragon Balls, which are scattered throughout the world and can grant any wish.",
+  
+    },
   {
     id: "24",
     name: "vinland saga",
